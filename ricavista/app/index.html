@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rica Vista Tenant Help</title>
+  <meta name="description" content="Installable tenant app for Rica Vista Apartments.">
+  <meta name="theme-color" content="#1a5f56">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Rica Vista">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icons/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="app-shell">
+  <div class="app-frame">
+    <div id="banner"></div>
+    <header class="app-top">
+      <img src="../icons/logo.svg" alt="" width="36" height="36">
+      <div>
+        <div class="brand-name" style="font-size:1.05rem">Rica Vista</div>
+        <div class="tiny muted" id="app-unit-label">Tenant Help</div>
+      </div>
+    </header>
+    <main class="app-main" id="app"></main>
+    <nav class="tabbar" aria-label="App">
+      <a href="#/" data-tab="home"> <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 3 11h2v9h6v-6h2v6h6v-9h2L12 3z"/></svg> Home</a>
+      <a href="#/new" data-tab="new"> <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6V5z"/></svg> Request</a>
+      <a href="#/requests" data-tab="requests"> <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 6h14v2H5V6zm0 5h14v2H5v-2zm0 5h14v2H5v-2z"/></svg> Activity</a>
+      <a href="#/info" data-tab="info"> <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 9h2V7h-2v2zm0 8h2v-6h-2v6zm1-14a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg> Info</a>
+    </nav>
+  </div>
+  <script src="../js/store.js"></script>
+  <script src="../js/qr.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tenant Portal · Rica Vista Tenant Help</title>
+  <meta name="description" content="Web portal for Rica Vista residents to request help and track status.">
+  <meta name="theme-color" content="#1a5f56">
+  <link rel="icon" href="../icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="portal">
+  <a class="skip" href="#app">Skip to content</a>
+  <div class="chrome">
+  <div id="banner"></div>
+  <header class="site-header">
+    <a class="brand" href="../">
+      <img class="brand-mark" src="../icons/logo.svg" alt="">
+      <span class="brand-text">
+        <span class="brand-name">Rica Vista Tenant Help</span>
+        <span class="brand-sub">Tenant Portal · 1825 Poggi Street, Alameda, CA</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Portal">
+      <a href="#/" data-nav="home">Home</a>
+      <a href="#/new" data-nav="new">New request</a>
+      <a href="#/requests" data-nav="requests">My requests</a>
+      <a href="../app/">App</a>
+      <a href="../admin/">Manager</a>
+    </nav>
+  </header>
+  </div>
+  <main id="app" class="wrap" style="padding-top:1.4rem"></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Unofficial proof of concept. Prefer the phone app? <a href="../app/">Open the Tenant App</a>. Prefer a printed overview? <a href="../proposal.html">Read the one-page proposal</a>.</p>
+    </div>
+  </footer>
+  <script src="../js/store.js"></script>
+  <script src="../js/qr.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/portal.js"></script>
+</body>
+</html>
