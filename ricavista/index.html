@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rica Vista Tenant Help</title>
+  <meta name="description" content="A simple way for Rica Vista residents to request help, and for staff to be notified right away.">
+  <meta name="theme-color" content="#1a5f56">
+  <link rel="icon" href="icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="landing">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="chrome">
+  <div class="demo-banner" role="status"><strong>Proof of concept · Sample data.</strong> In this demo, a request opens a text on your phone — nothing is sent until you tap Send in Messages.</div>
+  <header class="site-header">
+    <a class="brand" href="./">
+      <img class="brand-mark" src="icons/logo.svg" alt="">
+      <span class="brand-text">
+        <span class="brand-name">Rica Vista Tenant Help</span>
+        <span class="brand-sub">1825 Poggi Street, Alameda, CA</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="portal/">Tenant Portal</a>
+      <a href="app/">Tenant App</a>
+      <a href="admin/">Manager Console</a>
+      <a href="proposal.html">Proposal</a>
+    </nav>
+  </header>
+  </div>
+  <main id="main">
+    <div class="wrap">
+      <section class="hero-art" aria-labelledby="hero-title">
+        <div class="sun" aria-hidden="true"></div>
+        <div class="vista-line" aria-hidden="true"></div>
+        <p class="eyebrow">For residents and building staff</p>
+        <h1 id="hero-title">Help that reaches the right person.</h1>
+        <div class="lede">
+          <p>Rica Vista Tenant Help lets residents send a maintenance or emergency request in a few taps, and notifies the right staff right away — including after hours.</p>
+          <p>Residents can use the web portal or a simple phone app. Staff use a manager console to change who gets texted or called, and to keep a record of every request.</p>
+          <p>This is a working proof of concept with clearly labeled sample data, prepared for review. In this demo, sending a request opens a text on your phone; a production version would send automatically from a building number.</p>
+        </div>
+      </section>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="portal/">Tenant Portal</a>
+        <a class="btn btn-primary" href="app/">Tenant App</a>
+        <a class="btn btn-primary" href="admin/">Manager Console</a>
+      </div>
+      <div class="cta-row">
+        <button type="button" class="btn btn-accent" id="guided-demo-btn">Try a sample request</button>
+        <a class="btn btn-ghost" href="proposal.html">One-page proposal</a>
+        <a class="btn btn-ghost" href="how-it-works/">How paging works</a>
+      </div>
+
+      <section style="margin:2.4rem 0 1rem" aria-labelledby="how-title">
+        <h2 id="how-title">How a request moves</h2>
+        <div class="grid-3">
+          <article class="card feature">
+            <p class="eyebrow">1</p>
+            <h3>Resident reports it</h3>
+            <p>A tenant chooses a unit and a category — a water leak, a lockout, a gate issue, or an emergency — and adds a short description.</p>
+          </article>
+          <article class="card feature">
+            <p class="eyebrow">2</p>
+            <h3>The right people are listed</h3>
+            <p>Routing rules decide who should be notified, and in what order. Numbers and roles are easy to change in the manager console.</p>
+          </article>
+          <article class="card feature">
+            <p class="eyebrow">3</p>
+            <h3>A record is kept</h3>
+            <p>Staff can acknowledge the request and update its status. The tenant can see that it was received and when it was resolved.</p>
+          </article>
+        </div>
+      </section>
+
+      <p class="hint" style="margin-top:1.5rem">Manager Console PIN for this demo: <strong>1825</strong>. This is not an official service of the building. Prepared by Aaron Daley, resident.</p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Rica Vista Tenant Help · Unofficial proof of concept for 1825 Poggi Street, Alameda, CA.</p>
+      <p>Prepared by Aaron Daley, resident. Sample names and requests are for demonstration only.</p>
+    </div>
+  </footer>
+  <div id="demo-host"></div>
+  <script src="js/store.js"></script>
+  <script src="js/qr.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/landing.js"></script>
+</body>
+</html>

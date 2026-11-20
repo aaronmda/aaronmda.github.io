@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proposal · Rica Vista Tenant Help</title>
+  <link rel="icon" href="icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #17211f;
+      --muted: #4f5b56;
+      --teal: #1a5f56;
+      --teal-deep: #0e3f39;
+      --line: #d5cdbd;
+      --paper: #fff;
+      --wash: #eef6f3;
+      --gold: #f3e6c8;
+    }
+    * { box-sizing: border-box; }
+    @page { size: letter; margin: 0.42in; }
+    html, body { margin: 0; padding: 0; background: #e7e0d0; color: var(--ink);
+      font-family: "Atkinson Hyperlegible", "Segoe UI", sans-serif; }
+    .sheet {
+      width: 8.5in; min-height: 11in; margin: 1rem auto; background: var(--paper);
+      padding: 0.48in; box-shadow: 0 10px 40px rgba(23,33,31,.12);
+    }
+    header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
+      border-bottom: 2px solid var(--teal); padding-bottom: 0.4rem; margin-bottom: 0.45rem; }
+    .brand { display: flex; gap: 0.65rem; align-items: center; }
+    .brand img { width: 40px; height: 40px; }
+    h1 { font-family: Fraunces, Georgia, serif; font-size: 1.42rem; margin: 0; font-weight: 600; letter-spacing: -0.02em; }
+    .sub { color: var(--muted); font-size: 0.88rem; margin: 0.15rem 0 0; }
+    .meta { text-align: right; font-size: 0.8rem; color: var(--muted); }
+    h2 { font-family: Fraunces, Georgia, serif; font-size: 0.92rem; color: var(--teal-deep);
+      margin: 0.48rem 0 0.18rem; border-bottom: 1px solid var(--line); padding-bottom: 0.12rem; font-weight: 600; }
+    p, li { font-size: 0.79rem; line-height: 1.3; margin: 0 0 0.22rem; }
+    ul { margin: 0 0 0.35rem; padding-left: 1.1rem; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.45rem; }
+    .split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 0.5rem; align-items: stretch; }
+    .box { background: var(--wash); border: 1px solid #d7ebe6; border-radius: 8px; padding: 0.38rem 0.5rem; }
+    .box h3 { font-size: 0.82rem; margin: 0 0 0.2rem; color: var(--teal-deep); font-family: Fraunces, Georgia, serif; }
+    .cost { background: var(--wash); border-radius: 8px; padding: 0.5rem 0.65rem; }
+    .cost strong { color: var(--teal-deep); }
+    .pilot { background: var(--gold); border-radius: 8px; padding: 0.5rem 0.65rem; }
+    footer { margin-top: 0.32rem; border-top: 1px solid var(--line); padding-top: 0.28rem; page-break-inside: avoid;
+      display: flex; justify-content: space-between; gap: 1rem; font-size: 0.78rem; color: var(--muted); }
+    .toolbar { max-width: 8.5in; margin: 0.8rem auto 0; text-align: center; font-family: inherit; }
+    .toolbar a, .toolbar button {
+      font-family: inherit; font-size: 0.95rem; margin: 0 .25rem; padding: .5rem 1rem;
+      border-radius: 999px; border: 1.5px solid #c3b9a6; background: #fbf8f1; cursor: pointer; text-decoration: none; color: var(--ink);
+    }
+    @media print {
+      html, body { background: #fff !important; }
+      .sheet { width: auto; min-height: 0 !important; margin: 0; padding: 0; box-shadow: none; background: #fff; }
+      .toolbar, .no-print { display: none !important; }
+    }
+    @media (max-width: 700px) {
+      .sheet { width: auto; min-height: auto; margin: 0; padding: 1.1rem; box-shadow: none; }
+      .cols, .split { grid-template-columns: 1fr; }
+      header { flex-direction: column; }
+      .meta { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar no-print">
+    <button type="button" onclick="window.print()">Print or save as PDF</button>
+    <a href="./">Back to Tenant Help</a>
+  </div>
+  <article class="sheet">
+    <header>
+      <div class="brand">
+        <img src="icons/logo.svg" alt="">
+        <div>
+          <h1>Rica Vista Tenant Help</h1>
+          <p class="sub">A proof of concept for resident requests and staff notification<br>1825 Poggi Street, Alameda, CA</p>
+        </div>
+      </div>
+      <div class="meta">
+        One-page proposal<br>
+        November 2026
+      </div>
+    </header>
+
+    <h2>The opportunity</h2>
+    <p>Residents do not always know who to contact when something needs attention — a leak, a lockout, a gate that will not close, or a concern after the office has closed. Messages can land in different inboxes or phone threads, and it is not always clear whether a request was received, who is handling it, or when it was resolved. After-hours issues are especially easy to miss if the right on-call person is not in the thread.</p>
+
+    <h2>How it works</h2>
+    <p>A resident opens a simple web portal or an installable phone app, chooses a unit and a category, and submits a short description. The system lists the staff who should be notified, based on rules the manager can edit at any time — including more than one person, and a follow-up if no one has acknowledged the request after a set number of minutes. Each request keeps a status timeline the tenant can see: submitted, acknowledged, in progress, and done.</p>
+    <p><strong>This demonstration</strong> pages staff by opening a text message on the resident’s (or staff member’s) own phone, already addressed and written, ready to send. A call button is available as well, especially for emergencies, and emergency requests remind people to call 911 first if anyone is in danger. <strong>A production version</strong> would send those texts and calls automatically from a dedicated building number (for example, through Twilio), without using anyone’s personal messaging plan, and would escalate on its own if a request stays unacknowledged.</p>
+
+    <h2>Benefits</h2>
+    <div class="cols">
+      <div class="box">
+        <h3>For residents</h3>
+        <ul>
+          <li>One obvious place to ask for help, on the web or as a phone app</li>
+          <li>No guessing which number to use, including after hours</li>
+          <li>A record that the request was received and when it was resolved</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>For on-site staff</h3>
+        <ul>
+          <li>Requests arrive in a consistent format, with unit, category, and urgency</li>
+          <li>Routing and phone numbers are easy to change as roles or schedules change</li>
+          <li>A shared inbox and page log, instead of scattered texts</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>For ownership</h3>
+        <ul>
+          <li>A documented history of requests and response times</li>
+          <li>Faster, more reliable after-hours coverage with clear escalation</li>
+          <li>A modest operating cost for a single building, with a short pilot path</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>What would be needed to go live</h2>
+    <ul>
+      <li>Confirm staff names, roles, phone numbers, coverage hours, and a routing rule for each request type.</li>
+      <li>A small hosted backend (such as Supabase or Firebase) so requests stay in sync across devices, plus a building telephone number for automatic texts and calls.</li>
+      <li>US A2P 10DLC registration, the standard carrier process for business texting, so messages come from an identified building or management sender.</li>
+      <li>A brief resident notice explaining how to use the portal or app, and when to call 911 instead.</li>
+      <li>Optional later step: a store-listed iOS or Android app (Capacitor or Expo). Apple’s developer program is $99 per year; Google Play registration is $25, one time. The current demo already works as an installable web app.</li>
+    </ul>
+
+    <div class="split">
+      <div>
+        <h2>Estimated monthly cost for one building</h2>
+        <div class="cost">
+          <p>Based on Twilio’s published US rates as of November 2026: local number $1.15/month; outbound SMS $0.0083 per segment plus carrier fees of about $0.0025–$0.005; outbound voice $0.014/minute. A2P 10DLC low-volume registration is about $20 one time and $1.50/month. Backend hosting can often stay on a free tier for one property. <strong>Typical ongoing cost: about $5–$15 per month</strong> at modest volume. Vendor prices can change.</p>
+        </div>
+      </div>
+      <div>
+        <h2>A suggested 30-day pilot</h2>
+        <div class="pilot">
+          <p>Run Tenant Help alongside current practice for 30 days, starting with a short list of categories (water, lockout, access, after-hours emergency, general maintenance). Review the page log and response times at the midpoint and at month’s end. If the pilot is useful, move from phone-composed texts to automatic sending from a building number — without changing what residents see.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>Prepared by Aaron Daley, resident.</div>
+      <div>Unofficial proof of concept · Sample names in the demo are for illustration only</div>
+    </footer>
+  </article>
+</body>
+</html>
