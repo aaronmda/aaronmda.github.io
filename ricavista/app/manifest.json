@@ -1,0 +1,20 @@
+{
+  "id": "/ricavista/app/",
+  "name": "Rica Vista Tenant Help",
+  "short_name": "Rica Vista",
+  "description": "Request help at Rica Vista Apartments and notify building staff.",
+  "start_url": "/ricavista/app/",
+  "scope": "/ricavista/app/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f3eee4",
+  "theme_color": "#1a5f56",
+  "icons": [
+    {
+      "src": "/ricavista/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Manager Console · Rica Vista Tenant Help</title>
+  <meta name="description" content="Staff console for routing rules, request status, and the page log.">
+  <meta name="theme-color" content="#1a5f56">
+  <link rel="icon" href="../icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="admin">
+  <a class="skip" href="#app">Skip to content</a>
+  <div class="chrome">
+  <div id="banner"></div>
+  <header class="site-header">
+    <a class="brand" href="../">
+      <img class="brand-mark" src="../icons/logo.svg" alt="">
+      <span class="brand-text">
+        <span class="brand-name">Rica Vista Tenant Help</span>
+        <span class="brand-sub">Manager Console · 1825 Poggi Street, Alameda, CA</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="admin-nav" hidden>
+      <a href="#/inbox" data-nav="inbox">Inbox</a>
+      <a href="#/routing" data-nav="routing">Routing</a>
+      <a href="#/people" data-nav="people">People</a>
+      <a href="#/log" data-nav="log">Page log</a>
+      <button type="button" class="btn btn-ghost btn-sm" id="logout">Sign out</button>
+    </nav>
+  </header>
+  </div>
+  <main id="app" class="wrap" style="padding-top:1.4rem"></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Staff tools for this proof of concept. Changes to phone numbers apply to the next text or call that is opened. <a href="../how-it-works/">How paging works</a>.</p>
+    </div>
+  </footer>
+  <script src="../js/store.js"></script>
+  <script src="../js/qr.js"></script>
+  <script src="../js/ui.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

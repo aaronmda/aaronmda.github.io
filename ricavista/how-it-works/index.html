@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How paging works · Rica Vista Tenant Help</title>
+  <meta name="description" content="How this demo sends a text from a resident’s phone, and how a production version would page staff automatically.">
+  <meta name="theme-color" content="#1a5f56">
+  <link rel="icon" href="../icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="chrome">
+  <div class="demo-banner" role="status"><strong>Proof of concept.</strong> This page explains the demo and a possible production setup. Pricing is from Twilio’s published US rates as of November 2026.</div>
+  <header class="site-header">
+    <a class="brand" href="../">
+      <img class="brand-mark" src="../icons/logo.svg" alt="">
+      <span class="brand-text">
+        <span class="brand-name">Rica Vista Tenant Help</span>
+        <span class="brand-sub">How paging works</span>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="../">Home</a>
+      <a href="../proposal.html">Proposal</a>
+      <a href="../admin/">Manager Console</a>
+    </nav>
+  </header>
+  </div>
+  <main class="wrap-narrow article">
+    <p class="eyebrow">Overview</p>
+    <h1>How staff get notified</h1>
+    <p>There are two layers to this proof of concept: what the demo does today, and what a production version would do for the building.</p>
+
+    <h2>What this demo does</h2>
+    <p>When a resident submits a request, the app prepares a clear text message: the building, unit, category, urgency, description, request ID, and time. It also lists the staff roles who should be notified.</p>
+    <p>On a phone, a <strong>Send text</strong> button opens the device’s own Messages app with that note already filled in, using a standard <code>sms:</code> link. The resident (or a staff member helping them) taps Send. On a computer, the same message can be copied or opened on a phone by scanning a QR code. A <strong>Call</strong> button is available too, especially for emergencies, using a standard <code>tel:</code> link. Emergency requests also remind people to call 911 first if anyone is in danger.</p>
+    <p>If more than one person should be notified, iOS uses <code>sms:/open?addresses=…&amp;body=…</code> and Android uses <code>sms:number,number?body=…</code>. When those people currently share the same number, the demo sends one text and lists every role in the message so no one is double-texted.</p>
+    <p>The page log records that a text was <em>opened on the device</em>. It does not send anything by itself. Phone numbers in the manager console are the numbers used in those text and call links — change a number, and the next message uses it.</p>
+
+    <h2>What a production version would do</h2>
+    <p>In a live building system, the resident would simply submit the request. A small backend would send the text (and, when needed, place a call) automatically from a dedicated building number, without using the resident’s personal messaging plan. If no one acknowledged the request in the time set by the routing rules, the next person would be notified automatically. Staff could reply or tap a link to acknowledge. Tenants would still use either the web portal or the app.</p>
+    <p>A practical setup is Twilio for SMS and voice, plus a hosted backend such as Supabase or Firebase (or a small Cloudflare Worker) to store requests, apply routing rules, and keep the tenant and manager views in sync across devices. US application-to-person texting also requires A2P 10DLC registration — a standard carrier process that identifies the building or management company as the sender.</p>
+
+    <h2>Estimated cost for one building</h2>
+    <div class="cost-box">
+      <p>Figures below use Twilio’s published US pricing as of November 2026 and assume modest volume for a single property. Carrier fees can add a fraction of a cent per text. Prices can change.</p>
+      <ul>
+        <li>Local number: <strong>$1.15 per month</strong></li>
+        <li>Outbound SMS: <strong>$0.0083</strong> per 160-character segment, plus carrier pass-through fees (typically about $0.0025–$0.005)</li>
+        <li>Outbound voice: <strong>$0.014 per minute</strong></li>
+        <li>A2P 10DLC, low-volume mixed use (a good fit for one building): about <strong>$4.50</strong> brand registration and <strong>$15</strong> campaign vetting, one time, then <strong>$1.50 per month</strong>. (Sole proprietor campaigns are $2/month; standard campaigns can be $10/month.)</li>
+        <li>Backend hosting: often <strong>$0 on a free tier</strong> for one building; a paid plan is typically $0–$25/month if you outgrow the free tier.</li>
+      </ul>
+      <p><strong>Typical monthly total for one building: about $5–$15</strong> at a few hundred texts, once registration is complete. One-time A2P setup is about $20.</p>
+    </div>
+
+    <h2>If you also want store apps</h2>
+    <p>The tenant experience here is already an installable web app (a PWA) with its own home-screen icon. Shipping a true iOS or Android app could be done later with Capacitor or Expo, using the same design. Apple’s developer program is $99 per year; Google Play registration is $25, one time.</p>
+
+    <p style="margin-top:2rem"><a href="../">Back to the main page</a> · <a href="../proposal.html">One-page proposal</a></p>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap-narrow">
+      <p>Prepared by Aaron Daley, resident. Unofficial proof of concept — not an official building service.</p>
+    </div>
+  </footer>
+</body>
+</html>
