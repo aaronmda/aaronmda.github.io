@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>RV embed test</title>
+<link rel="alternate" type="application/json+oembed" href="https://aaronmda.github.io/ricavista-wp/embed-test/oembed.json">
+</head><body style="font-family:sans-serif;background:#e8f3f1"><h2 id="t">script did not run</h2>
+<script>
+document.getElementById('t').textContent='SCRIPT RAN in embed. ls='+(function(){try{localStorage.setItem('x','1');return 'ok'}catch(e){return 'blocked'}})();
+var m=location.hash.match(/secret=([\w]+)/);function h(){if(m)parent.postMessage({message:'height',value:document.documentElement.scrollHeight,secret:m[1]},'*');}
+h();setTimeout(h,300);
+</script></body></html>
